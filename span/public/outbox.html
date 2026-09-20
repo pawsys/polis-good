@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Span email outbox</title>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,700;12..96,800&family=DM+Mono:wght@400;500&family=Instrument+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <div class="wrap">
+    <header class="top"><a class="logo" href="/">Span</a></header>
+    <main>
+      <h1 class="question">Email outbox</h1>
+      <p class="lede">Emails Span has queued to bring people back. Delivery is not connected yet, so nothing here has been sent.</p>
+      <div id="list" style="display:grid;gap:12px;margin-top:24px"></div>
+    </main>
+  </div>
+  <script src="/common.js"></script>
+  <script>
+    Span.api('/api/dev/outbox').then(({ emails }) => {
+      const { el } = Span;
+      document.getElementById('list').replaceChildren(...(emails.length ? emails.map((m) => el('article', { class: 'panel' },
+        el('div', { class: 'eyebrow' }, `${m.kind} · to ${m.to} · ${new Date(m.createdAt).toLocaleString()}`),
+        el('h3', { style: 'font-size:20px;margin:8px 0' }, m.subject),
+        el('p', { style: 'white-space:pre-wrap;margin:0' }, m.body))) : [el('p', { class: 'note' }, 'Nothing queued yet.')]));
+    });
+  </script>
+</body>
+</html>

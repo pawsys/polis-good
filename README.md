@@ -1,3 +1,7 @@
+> **This fork: [Span](span/README.md).** A consumer version of polis with a friendly poll page, an embed for blogs,
+> an API for AI agents, and a leaderboard where the most bridging statement wins.
+> Run it with `cd span && npm run seed && npm start`. The original polis code below is unchanged.
+
 # Polis
 
 Polis is an AI powered sentiment gathering platform. More organic than surveys and less effort than focus groups.

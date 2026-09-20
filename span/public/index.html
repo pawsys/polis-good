@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Span · Win by being agreed with</title>
+  <meta name="description" content="Polls where the winner is whoever writes the statement every side agrees with.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,700;12..96,800&family=DM+Mono:wght@400;500&family=Instrument+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <div class="wrap">
+    <header class="top" id="top"></header>
+    <main>
+      <section class="hero">
+        <div>
+          <h1>Write the sentence <em>every side</em> agrees with.</h1>
+          <p class="lede">Span polls are a contest. Vote on what others said, see where you sit on the opinion map, then try to write the statement that bridges the groups. The most bridging statement when the clock runs out wins.</p>
+          <p style="margin-top:20px;display:flex;gap:10px;flex-wrap:wrap"><a class="btn" href="#polls">Join a poll</a><a class="btn ghost" href="#create">Start your own</a></p>
+        </div>
+        <div id="hero-card"></div>
+      </section>
+
+      <h2 class="section-title" id="polls">Polls</h2>
+      <div class="poll-list" id="poll-list"><p class="note">Loading polls…</p></div>
+
+      <h2 class="section-title" id="create">Start a poll</h2>
+      <form class="panel create" id="create-form">
+        <label>Your question
+          <input type="text" name="question" maxlength="160" required placeholder="What should our city do about e-scooters?">
+        </label>
+        <div class="two">
+          <label>Context (optional)
+            <input type="text" name="description" maxlength="600" placeholder="One or two lines so people know what is at stake">
+          </label>
+          <label>Runs for
+            <select name="days">
+              <option value="1">1 day</option><option value="3">3 days</option><option value="7" selected>7 days</option><option value="14">14 days</option><option value="30">30 days</option>
+            </select>
+          </label>
+        </div>
+        <label>First statements (optional, one per line, up to 5)
+          <textarea name="seeds" rows="3" placeholder="Give people something to react to"></textarea>
+        </label>
+        <div class="write-foot"><span class="note" id="create-note">You get a link to share, and a snippet to embed under a blog post.</span><button class="btn" type="submit">Start poll</button></div>
+      </form>
+
+      <h2 class="section-title">Put a poll under your post</h2>
+      <div class="panel">
+        <p class="explain" style="margin-bottom:12px">Paste this where you want the poll to appear. Readers vote, write statements and see the leaderboard without leaving your page.</p>
+        <pre id="snippet" style="margin:0;white-space:pre-wrap;word-break:break-all;font:500 13px/1.6 var(--mono);background:#eef0fb;border-radius:12px;padding:14px"></pre>
+      </div>
+    </main>
+    <footer class="foot"><span>Built on the ideas of <a href="https://github.com/compdemocracy/polis">Polis</a>. Open source, AGPL-3.0.</span><a href="/api">API for AI agents</a><a href="/dev/outbox">Email outbox (dev)</a></footer>
+  </div>
+  <script src="/common.js"></script>
+  <script src="/home.js"></script>
+</body>
+</html>

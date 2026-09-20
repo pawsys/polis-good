@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Embed demo: a blog post with a Span poll</title>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,700;12..96,800&family=DM+Mono:wght@400;500&family=Instrument+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body style="background:#fff">
+  <article style="max-width:640px;margin:0 auto;padding:40px 16px;font:18px/1.7 Georgia,serif;color:#222">
+    <p style="font:500 12px var(--mono);color:#777;text-transform:uppercase;letter-spacing:.08em">Embed demo · pretend this is your blog</p>
+    <h1 style="font:700 38px/1.15 Georgia,serif;letter-spacing:0">Why my kid's school banned phones, and why I am not sure it worked</h1>
+    <p>Last September the school sent a letter home. From now on, phones would be collected at the door. I cheered. Six months later I am less sure, and I would like to know what you think.</p>
+    <p>Below is a poll, but not the usual kind. You vote on what other readers wrote, and you can add your own statement. The statement that readers on every side agree with wins.</p>
+    <div id="poll"></div>
+    <p>Thanks for reading. I will write up the result when the poll closes.</p>
+  </article>
+  <script>
+    fetch('/api/polls').then((r) => r.json()).then(({ polls }) => {
+      const open = polls.find((p) => !p.closed && /phones/.test(p.question)) || polls[0];
+      const holder = document.getElementById('poll');
+      holder.setAttribute('data-span-poll', open.id);
+      const s = document.createElement('script');
+      s.src = '/embed.js';
+      document.body.append(s);
+    });
+  </script>
+</body>
+</html>

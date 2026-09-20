@@ -1,0 +1,13 @@
+{
+  "name": "span",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Consumer-friendly polis: vote, see the opinion map, compete to write the statement that bridges every group.",
+  "license": "AGPL-3.0",
+  "engines": { "node": ">=22.5" },
+  "scripts": {
+    "start": "node --disable-warning=ExperimentalWarning server.js",
+    "seed": "node --disable-warning=ExperimentalWarning seed.js",
+    "test": "node --disable-warning=ExperimentalWarning --test"
+  }
+}
