@@ -12,7 +12,7 @@ Plan for the next session is in NEXT.md, direction in ROADMAP.md, history in LOG
 - I may send the daily email without asking. I never type passwords or keys; the founder does that.
 - **Not overzealous. Always start from the simplest version possible**, show it, then add.
 - Trusts me to decide details. Do not overbuild process.
-- Can start extra sessions any time with `/paul [focus]`. May paste messages while I work; fold them in.
+- Starts extra sessions by just writing "run a session [focus]" in the thread. May paste messages while I work; fold them in.
 
 ## Decisions
 
