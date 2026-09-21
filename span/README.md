@@ -55,6 +55,6 @@ Pages:
 
 ## Process
 
-Polpu (Claude) works on this daily. Who Polpu is, the plan and the log: [POLPU.md](POLPU.md).
+Polpu (Claude) works on this daily. The plan and the log: [.claude/skills/span/SKILL.md](../.claude/skills/span/SKILL.md).
 
 License: AGPL-3.0, same as polis.
