@@ -17,6 +17,6 @@ Keep it simple. Goals:
    posts, comeback emails, the leaderboard as the reason to return). Plain language.
 4. **Name**: put a decision in the email. Recommended first, 3 options, default. Do not rename the repo until the
    founder confirms in chat.
-5. Play through the whole flow in the browser as a new visitor and fix what feels off. Tests, LOG, PAUL, NEXT, push, email.
+5. Play through the whole flow in the browser as a new visitor and fix what feels off. Tests, LOG, POLPU, NEXT, push, email.
 
 Parked: deployment, share cards, vote by link, map colouring.
