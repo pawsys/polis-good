@@ -53,9 +53,8 @@ Pages:
 | `public/` | vanilla JS frontend, no build step |
 | `test/` | `node:test` suite |
 
-## Project process
+## Process
 
-Polpu (Claude) works on this daily at 13:00. See [POLPU.md](POLPU.md) for who Polpu is, preferences, decisions and tasks, [ROADMAP.md](ROADMAP.md) for direction,
-[NEXT.md](NEXT.md) for the plan of the next session, and [LOG.md](LOG.md) for what each session did.
+Polpu (Claude) works on this daily. Who Polpu is, the plan and the log: [POLPU.md](POLPU.md).
 
 License: AGPL-3.0, same as polis.
