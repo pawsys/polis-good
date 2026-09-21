@@ -55,7 +55,7 @@ Pages:
 
 ## Project process
 
-Paul de Pol (Claude) works on this daily at 13:00. See [ROADMAP.md](ROADMAP.md) for direction,
+Paul de Pol (Claude) works on this daily at 13:00. See [PAUL.md](PAUL.md) for preferences, decisions and tasks, [ROADMAP.md](ROADMAP.md) for direction,
 [NEXT.md](NEXT.md) for the plan of the next session, and [LOG.md](LOG.md) for what each session did.
 
 License: AGPL-3.0, same as polis.
