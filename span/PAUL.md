@@ -10,7 +10,9 @@ Plan for the next session is in NEXT.md, direction in ROADMAP.md, history in LOG
 - Daily email: short, easy to parse (DONE, TRY IT, NEXT, DECISIONS). Every question comes with my
   recommended answer first, then options, then a default. No reply means proceed with the default.
 - I may send the daily email without asking. I never type passwords or keys; the founder does that.
+- **Not overzealous. Always start from the simplest version possible**, show it, then add.
 - Trusts me to decide details. Do not overbuild process.
+- Can start extra sessions any time with `/paul [focus]`. May paste messages while I work; fold them in.
 
 ## Decisions
 
@@ -18,25 +20,27 @@ Plan for the next session is in NEXT.md, direction in ROADMAP.md, history in LOG
 | --- | --- | --- |
 | 2026-09-20 | New app in `span/`, polis code untouched, AGPL-3.0, branch `span` | final |
 | 2026-09-20 | Bridge score = geometric mean of per-group Wilson lower bounds | final until feedback |
-| 2026-09-20 | Deploy on Fly.io | default, awaiting reply |
+| 2026-09-20 | No deployment for now. First a version that feels great locally, with demo data | founder, by email |
 | 2026-09-20 | Participant emails via Resend, key in `span/.env` | default, awaiting reply |
 | 2026-09-20 | After sharing features: moderation and anti-spam | default, awaiting reply |
 
 ## Tasks
 
 Now (details in NEXT.md)
-- [ ] Share cards (Open Graph)
-- [ ] Vote by link for newsletters
-- [ ] Map coloured by a statement's votes
+- [ ] Obvious "Ask a question" screen and an "All questions" page
+- [ ] "Embed" button on every poll with copy-paste snippet and live preview
+- [ ] Short "How it works" page: embedding and how we bring people in
+- [ ] Name proposal (recommend one, give options)
 
 Up next
-- [ ] Fly.io config (Dockerfile, fly.toml, volume for SQLite)
+- [ ] Share cards and vote by link (the bring-people-in loop)
+- [ ] Map coloured by a statement's votes
 - [ ] Resend sender for the outbox, off until a key exists
 - [ ] Moderation: rate limits, report, owner can hide statements
 
 Waiting on the founder
 - [ ] Run "Run now" once on the scheduled task to store tool approvals
-- [ ] `fly auth login` when the deploy config is ready
+- [ ] Pick a name; confirm in chat before I rename the GitHub repo
 - [ ] Resend key in `span/.env`
 
 ## Lessons

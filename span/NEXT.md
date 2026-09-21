@@ -1,19 +1,22 @@
 # Next session plan
 
-Written at the end of every session. The next session starts here, unless pawsys's email reply says otherwise.
+Written at the end of every session. The next session starts here, unless the founder's email reply says otherwise.
 
-## Session 2 (2026-09-21, 13:00)
+## Session 2
 
-Goal: make a poll shareable outside an iframe, and make the map more fun to explore.
+Founder's reply (2026-09-20): skip deployment. Build a version that feels good to play with. It must be obvious
+where to ask a question, where all the questions are, where the embed option is and how embedding works.
+Explain our vision for bringing people in. Propose a name.
 
-1. **Share cards**: `/p/:id` serves Open Graph and Twitter meta tags (question, leader, time left) and
-   a generated SVG/PNG card at `/p/:id/card.svg`, so links look good on Substack, X, WhatsApp.
-2. **Vote by link**: `/p/:id/v/:statementId/:vote` records a vote and lands on the poll, so a newsletter
-   can carry "Agree / Disagree" buttons without any script.
-3. **Map**: click a statement (from group cards or a picker) to colour every dot by that person's vote.
-4. Tests for 1 and 2. Update ROADMAP, LOG, and this file. Commit, push, send the daily email.
+Keep it simple. Goals:
 
-Waiting on pawsys (do not block on these):
+1. **Navigation**: top bar with "Questions" and a gold "Ask a question" button on every page. `/new` is a
+   dedicated create screen (move the form off the home page), `/` lists all questions.
+2. **Embed**: "Embed" button on each poll page opens a panel with the snippet, a copy button and a link to the live demo.
+3. **How it works** page (`/how`): three short parts: play, embed, how people come in (share link, embed under
+   posts, comeback emails, the leaderboard as the reason to return). Plain language.
+4. **Name**: put a decision in the email. Recommended first, 3 options, default. Do not rename the repo until the
+   founder confirms in chat.
+5. Play through the whole flow in the browser as a new visitor and fix what feels off. Tests, LOG, PAUL, NEXT, push, email.
 
-- Where to deploy publicly (Fly.io, Render, Railway, a VPS?).
-- How Span should send real emails (provider key or Gmail app password in `span/.env`, entered by pawsys).
+Parked: deployment, share cards, vote by link, map colouring.
